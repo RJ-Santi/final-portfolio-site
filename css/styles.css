@@ -37,6 +37,18 @@ p {
   line-height: 1.75;
 }
 
+nav {
+  line-height: 1rem;
+}
+
+#navTitle:hover {
+  font-size: 1.1rem;
+}
+
+.navbar {
+  background-color: #F4F9F9;
+}
+
 .intro {
   background-color: #CCF2F4;
   position: relative;
@@ -49,6 +61,12 @@ p {
 
 .contact-me {
   background-color: #F4F9F9;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
 }
 
 .bottom-container {

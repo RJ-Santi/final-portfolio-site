@@ -15,6 +15,7 @@
   </head>
   <body class="mx-auto">
 
+  <!-- Navigation Bar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand">Ryan's Portfolio</a>
@@ -40,6 +41,7 @@
       </div>
     </nav>
 
+  <!-- Welcome Section -->
     <div class="intro">
       <img src="images/cloud.png" alt="cloud-img" class="cloud-top">
       <h1 class="mb-3">I'm Ryan</h1>
@@ -48,7 +50,8 @@
       <img src="images/mountain.png" alt="mountain-img" class="mountain">
     </div>
 
-    <a name="about-me">
+  <!-- Introduction Section -->
+    <a class="about-me" name="about-me">
     <div id="about-me" class="profile m-5">
       <img class="profile-picture" src="images/profilepicture.jpg" alt="profile-picture" >
       <h2 class="mt-3">Hello.</h2>
@@ -56,32 +59,38 @@
     </div>
     </a>
 
+  <!-- Skills Section -->
     <div class="middle-container py-5">
       <div class="skills">
         <h2>My Skills.</h2>
         <div class="skill-row">
           <img class="coding-gif" src="images/code-coding.gif" alt="coding-gif" >
           <h3>Web Development</h3>
-          <p>I started learning how to code about 5 years ago because I had a fascination with the way websites work.  Throughout my time learning how to code I have found a passion in creating my own websites, as well as enhancing others' existing sites.</p>
+          <p>I started learning how to code about 5 years ago because I had a fascination with the functionality behind websites.  Throughout my time learning how to code I have found a passion in creating my own websites, as well as enhancing others' existing sites.</p>
         </div>
         <div class="skill-row">
           <img class="pc" src="images/pc-building.gif" alt="pc-building-gif">
           <h3 class="build">PC Building</h3>
-          <p>A passion that I picked up through my love for gaming was PC building.  I built my first PC in 2019 and then built my second PC as a pandemic project; somehow I managed to get all the parts that I wanted at retail price!  Since building my own PCs I have gone on to build 3 more for close friends and a home-server for my parents.</p>
+          <p>I picked up a passion for PC building through my love for gaming.  I built my first PC in 2019 and proceeded to build my second PC as a pandemic project.  Since building my own PCs, I have gone on to build 3 more for close friends and a home-server for my parents.</p>
         </div>
       </div>
     </div>
 
+  <!-- Project Display Section -->
     <a name="projects">
     <div id="projects" class="project-container py-5">
-      <div class="projects">
+      <div class="projects hm-gradient">
         <h2>Projects.</h2>
         <div class="card-group mt-5">
           <div class="card">
             <img src="images/weather.jpg" class="card-img-top" alt="Image of the home page for the Weather application.">
+            <div class="overlay">
+              <div class="overlay-text">Click to View <br /> Weather Project</div>
+            </div>
             <div class="card-body">
               <h5 class="card-title">Weather Application</h5>
               <p class="card-text">This application takes a location input from the user and accesses the API from OpenWeatherMap.com in order to show the weather for the user's location.</p>
+              <a href="https://twitter.com/home" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Built with: HTML, Bootstrap, JS</small>
@@ -89,19 +98,27 @@
           </div>
           <div class="card">
             <img src="images/google.jpg" class="card-img-top" alt="Image of the home page for the Google clone application.">
+            <div class="overlay">
+              <div class="overlay-text">Click to View <br /> Clone Project</div>
+            </div>
             <div class="card-body">
               <h5 class="card-title">Google Clone</h5>
               <p class="card-text">This website is designed to look and feel exactly like the Google homepage.</p>
+              <a href="https://www.reddit.com/" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Built with: HTML, CSS, Bootstrap, JS</small>
             </div>
           </div>
           <div class="card">
-            <img src="images/example3.webp" class="card-img-top" alt="Image of the home page for the Movie + Show Watchlist application.">
+            <img src="images/mal-example.jpg" class="card-img-top" alt="Image of the home page for the Movie + Show Watchlist application.">
+            <div class="overlay">
+              <div class="overlay-text">Click to View <br /> Watchlist Project</div>
+            </div>
             <div class="card-body">
               <h5 class="card-title">Movie + Show Watchlist</h5>
               <p class="card-text">This application allows you to add, remove, rate, and organize shows and movies that the user has watched.</p>
+              <a href="https://beta.crunchyroll.com/" class="stretched-link" target="_blank"></a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Built with: HTML, CSS, Bootstrap, JS</small>
@@ -112,6 +129,7 @@
     </div>
     </a>
 
+  <!-- Contact Section -->
     <a name="contact">
     <div id="contact" class="contact-me p-5">
         <h2>Get In Touch.</h2>
@@ -121,6 +139,7 @@
     </div>
     </a>
 
+  <!-- Personal Links -->
     <div class="bottom-container p-4">
       <a class="footer-link" href="https://www.linkedin.com/in/ryan-santiago/" target="_blank">LinkedIn</a>
       <a class="footer-link" href="https://twitter.com/" target="_blank">Twitter</a>

@@ -107,6 +107,10 @@ p {
   position: relative;
 }
 
+.contact-form-div {
+  display: none;
+}
+
 .footer-link:hover {
   font-size: 1.1rem;
   line-height: 1rem;

@@ -136,21 +136,34 @@
 
   <!-- Contact Section -->
     <a name="contact">
-    <div id="contact" class="contact-me p-5">
-        <h2>Get In Touch.</h2>
-        <h3>If you love tech as much as I do.</h3>
-        <p class="mx-auto my-4 w-50">Love tech like me?  Lets have a chat and share more about our passion.</p>
-        <a class="button-contact-me">CONTACT ME</a>
+      <div id="contact" class="contact-me p-5">
+          <h2>Get In Touch.</h2>
+          <h3>If you love tech as much as I do.</h3>
+          <p class="mx-auto my-4 w-50">Love tech like me?  Lets have a chat and share more about our passion.</p>
+          <div class="contact-button-div">
+            <a class="button-contact-me">CONTACT ME</a>
+          </div>
 
-        <div class="contact-form-div">
-          <form id="contact-form">
+          <div class="contact-form-div">
+            <form id="contact-form">
+              <label>Name</label>
+              <input class="input-field" type="text" name="name" required>
 
-            <div class="d-grid col-6 mx-auto">
-              <button id="submit-btn" class="btn btn-dark" type="submit">Send</button>
-            </div>
-          </form>
-        </div>
-    </div>
+              <label>Subject</label>
+              <input class="input-field" type="text" name="subject" required>
+
+              <label>Email</label>
+              <input class="input-field" type="text" name="email" required>
+
+              <label>Message</label>
+              <textarea class="input-field" name="message" required></textarea>
+
+              <div class="d-grid mx-auto mt-2">
+                <button id="submit-btn" class="btn" type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+      </div>
     </a>
 
   <!-- Personal Links -->

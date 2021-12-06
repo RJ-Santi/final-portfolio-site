@@ -1,24 +1,61 @@
+:root {
+  --mainColor: #F4F9F9;
+  --secondaryColor: #CCF2F4;
+  --tertiaryColor: #FAFAFA;
+
+  --mainText: #11999E;
+  --secondaryText: #5aa9a9;
+  --hoverText: #AAAAAA;
+  --smallText: #222222;
+
+  --mainBorder: #0B6669;
+  --secondaryBorder: #0F888C;
+}
+
+/* Change to dark mode based on user OS preference */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mainColor: #515151;
+    --secondaryColor: #000000;
+    --tertiaryColor: #222222;
+
+    --mainText: #11999E;
+    --secondaryText: #5aa9a9;
+    --hoverText: #FAFAFA;
+    --smallText: #AAAAAA;
+
+    --mainBorder: #0B6669;
+    --secondaryBorder: #0F888C;
+  }
+}
+
+
 body {
   font-family: 'Merriweather', serif;
   text-align: center;
 }
 
 h1 {
-  color: #11999E;
+  color: var(--mainText);
   font-family: 'Sacramento', cursive;
   font-size: 5.6rem;
 }
 
 h2 {
-  color: 	#5aa9a9;
+  color: 	var(--secondaryText);
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
 }
 
 h3 {
-  color: #11999E;
+  color: var(--mainText);
   font-family: 'Montserrat', sans-serif;
   font-size: 1.75rem;
+}
+
+p {
+  color: var(--smallText);
 }
 
 nav {
@@ -31,7 +68,7 @@ nav {
 }
 
 .about-me, .contact, .footer-link, .nav-link {
-  color: #11999E;
+  color: var(--mainText);
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   margin: 10px 25px;
@@ -39,7 +76,7 @@ nav {
 }
 
 a:hover {
-  color:  #AAAAAA;
+  color:  var(--hoverText);
 }
 
 p {
@@ -47,32 +84,46 @@ p {
 }
 
 .navbar {
-  background-color: #F4F9F9;
+  background-color: var(--mainColor);
+  color: var(--mainText);
 }
 
 .intro {
-  background-color: #CCF2F4;
+  background-color: var(--secondaryColor);
   position: relative;
   padding-top: 6.25em;
 }
 
+.about-section {
+  background-color: var(--tertiaryColor);
+}
+
 .middle-container {
-  background-color: #F4F9F9;
+  background-color: var(--mainColor);
+}
+
+.project-container {
+  background-color: var(--tertiaryColor);
+}
+
+.card {
+  background-color: var(--tertiaryColor);
 }
 
 .contact-form-div {
   display: none;
+  color: var(--mainText);
 }
 
 #contact-form {
   display: block;
   max-width: 600px;
   margin: 0 auto;
-  border-color: #AAAAAA;
+  border-color: var(--hoverText);
   border: 1px solid;
   padding: 15px;
   border-radius: 5px;
-  background-color: #F7F7F7;
+  background-color: var(--tertiaryColor);
   margin-bottom: 50px;
   text-align: left;
 }
@@ -90,26 +141,26 @@ p {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-color: #AAAAAA;
+  border-color: var(--hoverText);
   border-radius: 5px;
   border: 1px solid;
   font-size: 1rem;
 }
 
 #submit-btn {
-  background-color: #0F888C;
+  background-color: var(--secondaryBorder);
   color: white;
 }
 
 #submit-btn:hover {
-  color:  #AAAAAA;
-  border: solid #0B6669 1px;
-  background: #11999E;
-  background-image: -webkit-linear-gradient(top, #11999E, #0F888C);
-  background-image: -moz-linear-gradient(top, #11999E, #0F888C);
-  background-image: -ms-linear-gradient(top, #11999E, #0F888C);
-  background-image: -o-linear-gradient(top, #11999E, #0F888C);
-  background-image: -webkit-gradient(to bottom, #11999E, #0F888C);
+  color:  var(--hoverText);
+  border: solid var(--mainBorder) 1px;
+  background: var(--mainText);
+  background-image: -webkit-linear-gradient(top, var(--mainText), var(--secondaryBorder));
+  background-image: -moz-linear-gradient(top, var(--mainText), var(--secondaryBorder));
+  background-image: -ms-linear-gradient(top, var(--mainText), var(--secondaryBorder));
+  background-image: -o-linear-gradient(top, var(--mainText), var(--secondaryBorder));
+  background-image: -webkit-gradient(to bottom, var(--mainText), var(--secondaryBorder));
   text-decoration: none;
   -webkit-box-shadow: 0 1px 14px 0 #000000;
   -moz-box-shadow: 0 1px 14px 0 #000000;
@@ -117,7 +168,7 @@ p {
 }
 
 .contact-me {
-  background-color: #F4F9F9;
+  background-color: var(--mainColor);
 }
 
 .card:hover {
@@ -159,7 +210,7 @@ p {
 }
 
 .bottom-container {
-  background-color: #CCF2F4;
+  background-color: var(--secondaryColor);
   position: relative;
 }
 
@@ -232,12 +283,12 @@ p {
 }
 
 .button-contact-me {
-   background: #0F888C;
-   background-image: -webkit-linear-gradient(top, #0F888C, #11999E);
-   background-image: -moz-linear-gradient(top, #0F888C, #11999E);
-   background-image: -ms-linear-gradient(top, #0F888C, #11999E);
-   background-image: -o-linear-gradient(top, #0F888C, #11999E);
-   background-image: -webkit-gradient(to bottom, #0F888C, #11999E);
+   background: var(--secondaryBorder);
+   background-image: -webkit-linear-gradient(top, var(--secondaryBorder), var(--mainText));
+   background-image: -moz-linear-gradient(top, var(--secondaryBorder), var(--mainText));
+   background-image: -ms-linear-gradient(top, var(--secondaryBorder), var(--mainText));
+   background-image: -o-linear-gradient(top, var(--secondaryBorder)C, var(--mainText));
+   background-image: -webkit-gradient(to bottom, var(--secondaryBorder), var(--mainText));
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;
@@ -251,7 +302,7 @@ p {
    -moz-box-shadow: 0 1px 9px 0 #000000;
    box-shadow: 0 1px 9px 0 #000000;
    text-shadow: 0 1px 0 #000000;
-   border: solid #0B6669 1px;
+   border: solid var(--mainBorder) 1px;
    text-decoration: none;
    display: inline-block;
    cursor: pointer;
@@ -259,13 +310,13 @@ p {
 }
 
 .button-contact-me:hover{
-   border: solid #0B6669 1px;
-   background: #11999E;
-   background-image: -webkit-linear-gradient(top, #11999E, #0F888C);
-   background-image: -moz-linear-gradient(top, #11999E, #0F888C);
-   background-image: -ms-linear-gradient(top, #11999E, #0F888C);
-   background-image: -o-linear-gradient(top, #11999E, #0F888C);
-   background-image: -webkit-gradient(to bottom, #11999E, #0F888C);
+   border: solid var(--mainBorder) 1px;
+   background: var(--mainText);
+   background-image: -webkit-linear-gradient(top, var(--mainText), var(--secondaryBorder));
+   background-image: -moz-linear-gradient(top, var(--mainText), var(--secondaryBorder));
+   background-image: -ms-linear-gradient(top, var(--mainText), var(--secondaryBorder));
+   background-image: -o-linear-gradient(top, var(--mainText), var(--secondaryBorder));
+   background-image: -webkit-gradient(to bottom, var(--mainText), var(--secondaryBorder));
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;

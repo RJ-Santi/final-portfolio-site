@@ -1,0 +1,28 @@
+{
+  "name": "portfolio_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RJ-Santi/final-portfolio-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RJ-Santi/final-portfolio-site/issues"
+  },
+  "homepage": "https://github.com/RJ-Santi/final-portfolio-site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

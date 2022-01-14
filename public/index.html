@@ -19,7 +19,10 @@
   <!-- Navigation Bar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand">Ryan's Portfolio</a>
+        <a class="navbar-brand" href="#">
+          <img class="ryan-logo" src="images/ryan-logo.PNG" alt="">
+        </a>
+        <a class="navbar-brand">RYAN'S PORTFOLIO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,7 +61,7 @@
       <div id="about-me" class="profile m-5">
         <img class="profile-picture" src="images/profilepicture.jpg" alt="profile-picture" >
         <h2 class="mt-3">Hello.</h2>
-        <p class="hello">My name is Ryan.  I am a college graduate from the University of Central Florida pursuing a career in web development.  This website has been built to showcase some of my skills utilizing HTML, CSS, and JS.  It is responsive and also contains features such as
+        <p class="hello">My name is Ryan.  I am a college graduate from the University of Central Florida pursuing a career in web development.  This website has been built to showcase some of my skills utilizing HTML, CSS, Bootstap, Javascript, Express, and Node.  It is responsive and also contains features such as
         a light/dark mode that changes based on the user's OS preferences.</p>
       </div>
       </a>
@@ -69,13 +72,13 @@
     <div class="passions">
       <h2>Passions.</h2>
 
-      <div class="skill-row">
+      <div class="passion-row">
         <img class="coding-gif" src="images/code-coding.gif" alt="coding-gif" >
         <h3>Web Development</h3>
         <p>I started learning how to code 5 years ago because I had a fascination with the functionality behind websites.  Throughout my time learning how to code I have found a passion in creating my own websites, as well as enhancing others' existing sites.</p>
       </div>
 
-      <div class="skill-row">
+      <div class="passion-row">
         <img class="pc" src="images/pc-building.gif" alt="pc-building-gif">
         <h3 class="build">PC Building</h3>
         <p>I picked up a passion for PC building through my love for gaming.  I built my first PC in 2019 and proceeded to build my second PC as a pandemic project.  Since building my own PCs, I have gone on to build 3 more for close friends and a home-server for my parents.</p>
@@ -85,11 +88,28 @@
 
   <!-- Skills Section -->
     <div class="skills-container py-5">
-      <div class="skills">
-        <h2>Skills.</h2>
+      <h2>Skills.</h2>
 
-        <!-- images of HTML, CSS, JS along with little explanations below -->
-      </div>
+        <div class="skills row d-flex justify-content-center">
+          <div class="col-md-3">
+            <img class="logo" src="images/html.png" alt="HTML logo.">
+          </div>
+          <div class="col-md-3">
+            <img class="logo" src="images/css.png" alt="CSS logo.">
+          </div>
+          <div class="col-md-3">
+            <img class="logo" src="images/js.png" alt="JS logo.">
+          </div>
+          <div class="col-md-3">
+            <img class="bootstrap-logo" src="images/bootstrap.png" alt="Bootstrap 5 logo.">
+          </div>
+          <div class="col-md-3">
+            <img class="logo" src="images/node.png" alt="NodeJS logo.">
+          </div>
+          <div class="col-md-3">
+            <img class="logo" src="images/express.png" alt="ExpressJS logo.">
+          </div>
+        </div>
     </div>
 
   <!-- Project Display Section -->

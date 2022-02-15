@@ -1,3 +1,4 @@
+requre('dotenv').config();
 const express = require('express');
 const app = express();
 
@@ -18,27 +19,32 @@ app.post('/', (req, res) => {
 
   // if using gmail
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.mail.yahoo.com',
+    port: 465,
+    service: 'yahoo',
+    secure: false,
     auth: {
-      user: 'rjsanti13@gmail.com',
-      pass: '002Darling'
-    }
+      user: 'process.env.EMAIL',
+      pass: 'process.env.PASSWORD'
+    },
+    debug: false,
+    logger: true
   }
   );
 
   const mailOptions = {
     from: req.body.email,
-    to: 'rjsanti13@gmail.com',
+    to: 'rsjames13@yahoo.com',
     subject: `Message from ${req.body.email}: ${req.body.subject}`,
     text: req.body.message
   }
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if(error) {
-      console.log(error);
+  const sendMail = transporter.sendMail(mailOptions, (err, data) => {
+    if(err) {
+      console.log(err);
       res.send('Error');
     } else {
-      console.log('Email sent: ' + info.response);
+      console.log('Email sent: ' + data.response);
       res.send('Success');
     }
   });

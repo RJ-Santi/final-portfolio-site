@@ -12,33 +12,35 @@ button.addEventListener('click', hideShow, false);
 function hideShow() {
   formDiv.style.display = 'block';
   this.style.display = 'none';
+  alert("This contact form is currently in development.")
 }
 
 submitButton.addEventListener('click', (e) => {
   e.preventDefault();
 
-  let formData = {
-    name: name.value,
-    subject: subject.value,
-    email: email.value,
-    message: message.value
-  }
-
-  let xhr = new XMLHttpRequest();
-  xhr.open('POST', '/');
-  xhr.setRequestHeader('content-type', 'application/json');
-  xhr.onload = function() {
-    console.log(xhr.responseText);
-    if(xhr.responseText == 'success') {
-      alert('Email Sent');
-      name.value = '';
-      subject.value = '';
-      email.value = '';
-      message.value = '';
-    } else {
-      alert('Something went wrong.  Verify all fields and try again.')
-    }
-  }
-
-  xhr.send(JSON.stringify(formData));
+  mail.send();
+  // let formData = {
+  //   name: name.value,
+  //   subject: subject.value,
+  //   email: email.value,
+  //   message: message.value
+  // }
+  //
+  // let xhr = new XMLHttpRequest();
+  // xhr.open('POST', '/');
+  // xhr.setRequestHeader('content-type', 'application/json');
+  // xhr.onload = function() {
+  //   console.log(xhr.responseText);
+  //   if(xhr.responseText == 'success') {
+  //     alert('Email Sent');
+  //     name.value = '';
+  //     subject.value = '';
+  //     email.value = '';
+  //     message.value = '';
+  //   } else {
+  //     alert('Something went wrong.  Verify all fields and try again.')
+  //   }
+  // }
+  //
+  // xhr.send(JSON.stringify(formData));
 });
